@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="inputContainer">
+        <div class="inputForm">
+            <fieldset>
+                <h2 class="fs-title">Create your Car</h2>
+                <select id="selectBrand">
+                <option value="" disabled selected hidden>Choose a brand</option> 
+                <option value="lbrand">Lamborghini</option>
+                <option value="fbrand">Ferrari</option>
+                <option value="rbrand">Rolls-Royce</option>
+            </select>
+                <select id="selectModel">
+                <option value="" disabled selected hidden>Choose a model</option> 
+                <option id="gmodel">Gallardo</option>
+            </select>
+                <select id="selectColor">
+                <option value="" disabled selected hidden>Choose a color</option> 
+                <option id="rcolor">Red</option>
+                <option id="ycolor">Yellow</option>
+                <option id="ocolor">Orange</option>
+            </select>
+                <input type="text" name="year" id="c_year" placeholder="Year" />
+                <input type="text" name="mph-kph" id="c_mph-kph" placeholder="Top Speed (mph)" />
+                <input type="submit" name="create" id="createBtn" class="next action-button" />
+                <button type="submit" id="displayBtn">Display Cars</button>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="results">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-left">Owner</th>
+                    <th class="text-left">Make</th>
+                    <th class="text-left">Model</th>
+                    <th class="text-left">Top Speed (kph)</th>
+                    <th class="text-left">Color</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">?</td>
+                    <td class="text-left">?</td>
+                    <td class="text-left">?</td>
+                    <td class="text-left">?</td>
+                    <td class="text-left">?</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+    <script src="cars.js"></script>
+    <script src="utils.js"></script>
+    <script src="factory.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
