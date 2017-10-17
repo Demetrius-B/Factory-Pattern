@@ -166,7 +166,7 @@ fieldset {
   .Btns div {
     padding-bottom: 2rem; }
     .Btns div #createBtn {
-      background-image: url(../../img/addCar.png);
+      background-image: url(/img/addCar.png);
       background-size: contain;
       height: 6vh;
       background-repeat: no-repeat;
@@ -182,7 +182,7 @@ fieldset {
   .Btns div {
     padding-bottom: 2rem; }
     .Btns div #displayBtn {
-      background-image: url(../../img/viewCar.png);
+      background-image: url(/img/viewCar.png);
       background-size: contain;
       height: 6vh;
       background-repeat: no-repeat;
