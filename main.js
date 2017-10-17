@@ -54,18 +54,19 @@ class Assignment { // A Singleton
     }
 
     showData() {
-        this.carGarage.forEach(function(e) {
-            for (var prop in e) {
-                var carResults = document.querySelector("tbody");
-                carResults.insertAdjacentHTML("afterend", "<tr><td>" + e[prop] + "</td></tr>");
-                console.log(prop, ":", e[prop]);
-            }
-        });
+        var carData = "";
+        for (var i = 0; i < this.carGarage.length; i++) {
+            carData += "<tr>";
+            carData += "<td>" + this.carGarage[i].name + "</td>";
+            carData += "<td>" + this.carGarage[i].model + "</td>";
+            carData += "<td>" + this.carGarage[i].color + "</td>";
+            carData += "<td>" + this.carGarage[i].year + "</td>";
+            carData += "<td>" + Utils.getKph(this.carGarage[i].mphtokph) + "</td>";
+            carData += "</tr>";
+        }
 
-        // for (var i = 0; i < this.carGarage.length; i++) {
-        // //     var carResults = document.querySelector("tbody");
-        // //     carResults.insertAdjacentHTML("afterend", "<tr><td>" + this.carGarage[this.carGarage.length - 1].name + "</td><td>" + this.carGarage[i].model + "</td><td>" + this.carGarage[i].color + "</td><td>" + this.carGarage[i].year + "</td><td>" + this.carGarage[i].mphtokph + "</td></tr>");
-        // }
+        var table = document.querySelector("tbody");
+        table.innerHTML = carData;
     }
 
     static getInstance() {
