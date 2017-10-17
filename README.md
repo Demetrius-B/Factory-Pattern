@@ -6,19 +6,18 @@ Create a small program utilizing the Factory and Singleton creational patterns.
 
 # Project Live Demo:
 
-You can find a live version of this site here[]
+You can find a live version of this site (http://url.com/ "Here")
 
-Project Requirements:
+# Project Requirements:
 
-Variables for font family, font size, and an action color.
-One mixin for a useful, reusable segment of styles.
-Two uses of nesting, but never more than three levels deep.
-One placeholder (%) and at least three uses of extend.
-A folder structure consisting of at least 3 folders, 5 partial files, imported into a single main scss file.
-Project Instructions:
+A Singleton, Utility class with at least one static method, and Factory Pattern must be employed
+The Singleton, Factory, and all concrete classes are in their own JS file (3 files)
+All code except for the Singleton instantiation is incapsulated in the appropriate class files. The Singleton is instantiated after the page loads.
+The Factory instantiates three (3) concrete classes and throws and error if an inappropriate class tries to instantiate.
+Data is collected from the user via input fields(form) that determines what concrete classes the Factory instantiates
+Maintain a reference to all the instances of the Factory created objects inside an array or other data structure.
+There is a second button labeled "Display Info" that, when clicked, will show information in the HTML about the the objects that the Factory created. This button should only be clicked after all the data is collected. 
+Make sure pages are adequately styled using CSS
 
-Navigate to the search bar at the top middle of the page. Enter a comic book name in the search bar then click the search icon. Your results will display below the search bar, you may click on the image to be redirected to the refernece page on the Marvel website.
-
-Project Developer
-
-Demetrius Berkeley, Web Design & Development Student at Full Sail University, Designing for web standards 2
+# Project Developer
+Demetrius Berkeley, Web Design & Development Student at Full Sail University
