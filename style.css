@@ -76,7 +76,7 @@ html {
 body {
   font-size: 1.8rem;
   font-family: "Roboto", sans-serif;
-  background: url(../img/bg.jpg) center no-repeat;
+  background: url(img/bg.jpg) center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
@@ -182,7 +182,7 @@ fieldset {
   .Btns div {
     padding-bottom: 2rem; }
     .Btns div #displayBtn {
-      background-image: url("../../img/viewCar.png");
+      background-image: url(../../img/viewCar.png);
       background-size: contain;
       height: 6vh;
       background-repeat: no-repeat;
