@@ -4,6 +4,6 @@ class Utils {
     constructor() {}
 
     static getKph(speed) {
-        return speed * 1.609344;
+        return speed * 1.6;
     }
 }

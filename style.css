@@ -153,6 +153,51 @@ fieldset {
     color: black;
     font-size: 18px; }
 
+.Btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 1rem; }
+  .Btns div {
+    padding-bottom: 2rem; }
+    .Btns div #createBtn {
+      background-image: url(../../img/addCar.png);
+      background-size: contain;
+      height: 6vh;
+      background-repeat: no-repeat;
+      width: 4vw;
+      background-color: white;
+      border: 0;
+      padding-bottom: 1rem; }
+      .Btns div #createBtn:hover + p {
+        display: block; }
+    .Btns div p {
+      display: none;
+      font-size: 1.7rem; }
+  .Btns div {
+    padding-bottom: 2rem; }
+    .Btns div #displayBtn {
+      background-image: url("../../img/viewCar.png");
+      background-size: contain;
+      height: 6vh;
+      background-repeat: no-repeat;
+      width: 4.5vw;
+      background-color: white;
+      border: 0;
+      padding-bottom: 1rem; }
+      .Btns div #displayBtn:hover + p {
+        display: block;
+        padding-bottom: 1rem; }
+    .Btns div p {
+      display: none;
+      padding-top: .5rem;
+      font-size: 1.7rem; }
+
 .results {
   display: -webkit-box;
   display: -webkit-flex;
@@ -214,3 +259,6 @@ td {
 
 th.text-left, td.text-left {
   text-align: left; }
+
+.topSpeedTR, .yearTR, .colorTR {
+  width: 15%; }

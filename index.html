@@ -32,8 +32,16 @@
             </select>
                 <input type="text" name="year" id="c_year" placeholder="Year" />
                 <input type="text" name="mph-kph" id="c_mph-kph" placeholder="Top Speed (mph)" />
-                <input type="submit" name="create" id="createBtn" class="next action-button" />
-                <button type="submit" id="displayBtn">Display Cars</button>
+                <div class="Btns">
+                    <div>
+                        <button type="submit" id="createBtn"></button>
+                        <p>Add Car</p>
+                    </div>
+                    <div>
+                        <button type="submit" id="displayBtn"></button>
+                        <p>Display Garage</p>
+                    </div>
+                </div>
             </fieldset>
         </div>
     </div>
@@ -42,24 +50,14 @@
         <table>
             <thead>
                 <tr>
-                    <th class="text-left">Owner</th>
-                    <th class="text-left">Make</th>
+                    <th class="text-left">Brand</th>
                     <th class="text-left">Model</th>
-                    <th class="text-left">Top Speed (kph)</th>
-                    <th class="text-left">Color</th>
-
-
+                    <th class="colorTR">Color</th>
+                    <th class="yearTR">Year</th>
+                    <th class="topSpeedTR">Top Speed (kph)</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="text-left">?</td>
-                    <td class="text-left">?</td>
-                    <td class="text-left">?</td>
-                    <td class="text-left">?</td>
-                    <td class="text-left">?</td>
-                </tr>
-
             </tbody>
         </table>
     </div>

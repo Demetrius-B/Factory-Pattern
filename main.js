@@ -5,7 +5,6 @@ window.addEventListener("load", e => {
     let assignment = Assignment.getInstance(); // Singleton is instantiated after the page loads.
 });
 
-
 class Assignment { // A Singleton
     constructor() {
         this.carGarage = [];
@@ -16,37 +15,19 @@ class Assignment { // A Singleton
     }
 
     setupCar() {
-        let brandOption = document.querySelector("#selectBrand").selectedIndex;
+        let selectB = document.querySelector("#selectBrand");
+        let selectBText = selectB.options[selectB.selectedIndex].text;
         let selectsM = document.querySelector("#selectModel");
         let selectedMText = selectsM.options[selectsM.selectedIndex].text;
         let selectsC = document.querySelector("#selectColor");
         let selectedCText = selectsC.options[selectsC.selectedIndex].text;
 
-        if (brandOption == 1) {
-            let l_car = "Lamborghini";
-            let newCar = carFactory.createCar(l_car); // create car
-            newCar.model = selectedMText; // Setting Car Model
-            newCar.color = selectedCText; // Setting Car Color
-            newCar.year = document.querySelector("#c_year").value; // Setting Car Year
-            newCar.mphtokph = Utils.getKph(document.querySelector("#c_mph-kph").value); // Setting Car mph to then be converted..
-            this.carGarage.push(newCar);
-        } else if (brandOption == 2) {
-            let f_car = "Ferrari";
-            let newCar = carFactory.createCar(f_car);
-            newCar.model = selectedMText; // Setting Car Model
-            newCar.color = selectedCText; // Setting Car Color
-            newCar.year = document.querySelector("#c_year").value; // Setting Car Year
-            newCar.mphtokph = Utils.getKph(document.querySelector("#c_mph-kph").value); // Setting Car mph to then be converted..
-            this.carGarage.push(newCar);
-        } else if (brandOption == 3) {
-            let r_car = "Rolls-Royce";
-            let newCar = carFactory.createCar(r_car);
-            newCar.model = selectedMText; // Setting Car Model
-            newCar.color = selectedCText; // Setting Car Color
-            newCar.year = document.querySelector("#c_year").value; // Setting Car Year
-            newCar.mphtokph = Utils.getKph(document.querySelector("#c_mph-kph").value); // Setting Car mph to then be converted..
-            this.carGarage.push(newCar);
-        }
+        let newCar = carFactory.createCar(selectBText); // create car
+        newCar.model = selectedMText; // Setting Car Model
+        newCar.color = selectedCText; // Setting Car Color
+        newCar.year = document.querySelector("#c_year").value; // Setting Car Year
+        newCar.mphtokph = Utils.getKph(document.querySelector("#c_mph-kph").value); // Setting Car mph to then be converted..
+        this.carGarage.push(newCar);
     }
 
     addModels() {
@@ -74,10 +55,17 @@ class Assignment { // A Singleton
 
     showData() {
         this.carGarage.forEach(function(e) {
-            var carResults = document.querySelector("tbody");
-            carResults.insertAdjacentHTML('afterbegin',
-                "<tr><td>" + e["name"] + "</td><td>" + e["model"] + "</td><td>" + e["color"] + "</td><td>" + e["year"] + "</td><td>" + e["mphtokph"] + "</td></tr>");
-        }, this);
+            for (var prop in e) {
+                var carResults = document.querySelector("tbody");
+                carResults.insertAdjacentHTML("afterend", "<tr><td>" + e[prop] + "</td></tr>");
+                console.log(prop, ":", e[prop]);
+            }
+        });
+
+        // for (var i = 0; i < this.carGarage.length; i++) {
+        // //     var carResults = document.querySelector("tbody");
+        // //     carResults.insertAdjacentHTML("afterend", "<tr><td>" + this.carGarage[this.carGarage.length - 1].name + "</td><td>" + this.carGarage[i].model + "</td><td>" + this.carGarage[i].color + "</td><td>" + this.carGarage[i].year + "</td><td>" + this.carGarage[i].mphtokph + "</td></tr>");
+        // }
     }
 
     static getInstance() {
