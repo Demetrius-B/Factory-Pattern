@@ -6,7 +6,7 @@ Create a small program utilizing the Factory and Singleton creational patterns.
 
 # Project Live Demo:
 
-You can find a live version of this site (http://url.com/ "Here")
+You can find a live version of this site [example](http://url.com/ "Title")
 
 # Project Requirements:
 
